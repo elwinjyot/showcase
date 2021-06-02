@@ -5,10 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="{% static 'styles/modules/fontAwesome.css' %}"
-    />
+    <link rel="stylesheet" href="httpstyle=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="{% static 'styles/main.css' %}" />
     <title>Showcase</title>
   </head>
@@ -21,12 +18,7 @@
         {% if user.is_authenticated %}
         <ul id="nav-list-wrapper">
           <li class="nav-item">
-            <input
-              type="search"
-              placeholder="Search"
-              name="search-showcase"
-              id="home-search-bar"
-            />
+            <input type="search" placeholder="Search" name="search-showcase" id="home-search-bar" />
           </li>
           <li class="nav-item navico">
             <a href="{% url 'feed' %}"><i class="far fa-home"></i> HOME</a>
@@ -45,9 +37,7 @@
             </div>
           </li>
           <li class="nav-item navico">
-            <a href="{% url 'logout' %}" style="text-decoration: none"
-              ><i class="far fa-sign-out"></i>LOGOUT</a
-            >
+            <a href="{% url 'logout' %}" style="text-decoration: none"><i class="far fa-sign-out"></i>LOGOUT</a>
           </li>
           <li class="nav-item profile">
             <a href="{% url 'profile' request.user.id %}">
@@ -59,20 +49,12 @@
         <ul id="nav-list-wrapper">
           <li class="nav-item">
             <a href="{% url 'signup' %}">
-              <button
-                id="signup-btn"
-                class="auth-btn"
-                data-formName="signupForm"
-              >
-                Sign Up
-              </button>
+              <button id="signup-btn" class="auth-btn" data-formName="signupForm">Sign Up</button>
             </a>
           </li>
           <li class="nav-item">
             <a href="{% url 'login' %}">
-              <button id="login-btn" class="auth-btn" data-formName="loginForm">
-                Login
-              </button>
+              <button id="login-btn" class="auth-btn" data-formName="loginForm">Login</button>
             </a>
           </li>
         </ul>
