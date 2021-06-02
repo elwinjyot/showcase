@@ -1,0 +1,34 @@
+{% extends "index.html" %} {% load static %}{% block container %}
+<div class="feed-page-parent">
+  {% csrf_token %}
+  <section class="subs">
+    <h2 class="main-title" style="padding-left: 12px">Following</h2>
+    <div class="all-subs">
+      {% for sub in all_following %}
+      <a href="{% url 'profile' sub.id %}">
+        <div class="sub">
+          <div class="profilePic">
+            <img src="{{sub.showcaser.profilePic.url}}" alt="" />
+          </div>
+          <h2>
+            {{sub.first_name}} {% if sub.showcaser.verified %}<i style="color: rgb(230, 230, 230); margin-left: 4px" class="far fa-check"></i>
+            {% endif %}
+          </h2>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  <section class="feed-container">
+    <h2 class="main-title">Feed</h2>
+    {% for post in all_posts %} {% if post.category == "Blog" %}
+    <div class="post-wrapper">{% include "components/postUserHead.html" %} {% include "components/blogPostBody.html" %} {% include "components/controls.html" %}</div>
+    {% elif post.category == 'Product' %}
+    <div class="post-wrapper">{% include "components/postUserHead.html" %} {% include "components/productPostBody.html" %} {% include "components/controls.html" %}</div>
+    {% endif %} {% endfor %}
+  </section>
+  <section class="trending">
+    <h2 class="main-title">Trending</h2>
+  </section>
+</div>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "index.html" %} {% block container %}
+<div class="auth-grid-layout">
+  <form class="auth-container" id="signupForm">
+    {% csrf_token %}
+    <h2 class="title">Sign Up</h2>
+    <div class="input-group name-input">
+      <input
+        type="text"
+        name="firstname"
+        placeholder="First Name"
+        autocomplete="off"
+        required
+      />
+      <input
+        type="text"
+        name="lastname"
+        placeholder="Last Name (Optional)"
+        autocomplete="off"
+      />
+    </div>
+    <div class="input-group">
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        autocomplete="off"
+        required
+      />
+    </div>
+    <div class="input-group">
+      <input
+        type="text"
+        name="username"
+        autocomplete="off"
+        placeholder="Username"
+        required
+      />
+    </div>
+    <div class="input-group">
+      <input type="password" name="password1" placeholder="Password" required />
+    </div>
+    <div class="input-group">
+      <input
+        type="password"
+        name="password2"
+        placeholder="Confirm Password"
+        required
+      />
+    </div>
+    <div class="error-container"></div>
+    <div class="input-group">
+      <button id="signupBtn">Join</button>
+    </div>
+    <div class="other-links">
+      <a href="{% url 'login' %}">Already a member</a>
+    </div>
+  </form>
+  <div class="social-wrapper">
+    <p>Signup with</p>
+    <div class="social-btn-wrapper">
+      <button><i class="fab fa-google"></i>Google</button
+      ><button><i class="fab fa-twitter"></i>Twitter</button
+      ><button><i class="fab fa-facebook-f"></i>Facebook</button
+      ><button><i class="fab fa-github"></i>Github</button>
+    </div>
+  </div>
+</div>
+{% endblock %}

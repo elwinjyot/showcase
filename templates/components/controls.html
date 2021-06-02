@@ -1,0 +1,52 @@
+<div class="controls">
+  {% if request.user in post.likes.all %}
+  <p
+    id="post{{post.category}}{{post.id}}"
+    data-state="true"
+    data-state="false"
+    data-postId="{{post.id}}"
+    data-cat="{{post.category}}"
+    class="likePost"
+  >
+    {{post.likes.all | length}} {% if request.user in post.likes.all %}
+    <i
+      style="color: #db4437"
+      class="fas fa-heart"
+      data-postId="{{post.id}}"
+      data-cat="{{post.category}}"
+    ></i>
+    {% else %}
+    <i
+      class="fas fa-heart"
+      data-postId="{{post.id}}"
+      data-cat="{{post.category}}"
+    ></i>
+    {% endif %}
+  </p>
+  {% else %}
+  <p
+    id="post{{post.category}}{{post.id}}"
+    data-state="false"
+    data-postId="{{post.id}}"
+    data-cat="{{post.category}}"
+    class="likePost"
+  >
+    {{post.likes.all | length}} {% if request.user in post.likes.all %}
+    <i
+      style="color: #db4437"
+      class="fas fa-heart"
+      data-postId="{{post.id}}"
+      data-cat="{{post.category}}"
+    ></i>
+    {% else %}
+    <i
+      class="fas fa-heart"
+      data-postId="{{post.id}}"
+      data-cat="{{post.category}}"
+    ></i>
+    {% endif %}
+  </p>
+  {% endif %}
+  <p>0 <i class="fas fa-comment"></i></p>
+  <p>0 <i class="fas fa-share"></i></p>
+</div>

@@ -1,0 +1,1153 @@
+@font-face {
+  font-family: Quicksand;
+  src: url("../fonts/Futura/futura medium bt.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url("../fonts/Futura/Futura Heavy font.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Cookie;
+  src: url("../fonts/Cookie/Cookie-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #161e29;
+}
+
+.open-opt-menu {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+body #root {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-color: #161e29;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #root .auth-grid-layout {
+  width: auto;
+  height: auto;
+  margin-top: 24px;
+}
+
+body #root .auth-grid-layout .auth-container {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 24px 20px 14px 20px;
+  width: 400px;
+  border-radius: 6px 0px 0px 6px;
+}
+
+body #root .auth-grid-layout .auth-container .title {
+  margin-bottom: 10px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+body #root .auth-grid-layout .auth-container .other-links {
+  padding-top: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 25px;
+  width: 100%;
+}
+
+body #root .auth-grid-layout .auth-container .other-links a {
+  text-decoration: none;
+  -webkit-transition: color 0.1s ease-out 0s;
+  transition: color 0.1s ease-out 0s;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+body #root .auth-grid-layout .auth-container .other-links a:hover {
+  color: #7041fe;
+}
+
+body #root .auth-grid-layout .auth-container .error-container p {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: none;
+}
+
+body #root .auth-grid-layout .auth-container .name-input {
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 12px;
+          column-gap: 12px;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+body #root .auth-grid-layout .auth-container .input-group {
+  padding: 8px 0px;
+}
+
+body #root .auth-grid-layout .auth-container .input-group input {
+  width: 100%;
+  -webkit-transition: -webkit-box-shadow 0.3s ease-out 0s;
+  transition: -webkit-box-shadow 0.3s ease-out 0s;
+  transition: box-shadow 0.3s ease-out 0s;
+  transition: box-shadow 0.3s ease-out 0s, -webkit-box-shadow 0.3s ease-out 0s;
+  padding: 12px 0px 12px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f0ecfd;
+  -webkit-transition: -webkit-box-shadow 0.1s ease-in 0s;
+  transition: -webkit-box-shadow 0.1s ease-in 0s;
+  transition: box-shadow 0.1s ease-in 0s;
+  transition: box-shadow 0.1s ease-in 0s, -webkit-box-shadow 0.1s ease-in 0s;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: #0c0c0c;
+}
+
+body #root .auth-grid-layout .auth-container .input-group input:focus {
+  outline: none;
+  -webkit-box-shadow: 0px 0px 0px 3.2px #5b31d8, 0px 0px 1px 3px #744bf0;
+          box-shadow: 0px 0px 0px 3.2px #5b31d8, 0px 0px 1px 3px #744bf0;
+}
+
+body #root .auth-grid-layout .auth-container .input-group input:hover {
+  -webkit-box-shadow: 0px 0px 0px 3.2px #5b31d8, 0px 0px 1px 3px #744bf0;
+          box-shadow: 0px 0px 0px 3.2px #5b31d8, 0px 0px 1px 3px #744bf0;
+}
+
+body #root .auth-grid-layout .auth-container .input-group button {
+  width: 100%;
+  padding: 10px 0px;
+  background-color: #7041fe;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+body #root .auth-grid-layout .auth-container .input-group button:hover {
+  background-color: #7f55fd;
+}
+
+body #root .auth-grid-layout .auth-container .input-group button:focus {
+  outline: none;
+}
+
+body #root .auth-grid-layout .auth-container .input-group button:active {
+  background-color: #5b31d8;
+}
+
+body #root .auth-grid-layout .auth-container .input-group:last-child {
+  padding-bottom: 0px;
+}
+
+body #root .auth-grid-layout .social-wrapper {
+  width: 400px;
+  padding: 0px 20px;
+}
+
+body #root .auth-grid-layout .social-wrapper p {
+  margin-bottom: 14px;
+  font-size: 24px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+body #root .auth-grid-layout .social-wrapper .social-btn-wrapper {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 12px;
+  -webkit-column-gap: 12px;
+          column-gap: 12px;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+body #root .auth-grid-layout .social-wrapper .social-btn-wrapper button i {
+  margin-right: 10px;
+}
+
+body #root .auth-grid-layout .social-wrapper .social-btn-wrapper button:nth-child(1) {
+  padding: 10px 6px;
+  background-color: #db4437;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+body #root .auth-grid-layout .social-wrapper .social-btn-wrapper button:nth-child(1):hover {
+  background-color: #ee5345;
+}
+
+body #root .auth-grid-layout .social-wrapper .social-btn-wrapper button:nth-child(1):focus {
+  outline: none;
+}
+
+body #root .auth-grid-layout .social-wrapper .social-btn-wrapper button:nth-child(1):active {
+  background-color: #c23427;
+}
+
+body #root .auth-grid-layout .social-wrapper .social-btn-wrapper button:nth-child(2) {
+  padding: 10px 6px;
+  background-color: #1da1f2;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+body #root .auth-grid-layout .social-wrapper .social-btn-wrapper button:nth-child(2):hover {
+  background-color: #3bb2fb;
+}
+
+body #root .auth-grid-layout .social-wrapper .social-btn-wrapper button:nth-child(2):focus {
+  outline: none;
+}
+
+body #root .auth-grid-layout .social-wrapper .social-btn-wrapper button:nth-child(2):active {
+  background-color: #118dda;
+}
+
+body #root .auth-grid-layout .social-wrapper .social-btn-wrapper button:nth-child(3) {
+  padding: 10px 6px;
+  background-color: #4267b2;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+body #root .auth-grid-layout .social-wrapper .social-btn-wrapper button:nth-child(3):hover {
+  background-color: #5074bd;
+}
+
+body #root .auth-grid-layout .social-wrapper .social-btn-wrapper button:nth-child(3):focus {
+  outline: none;
+}
+
+body #root .auth-grid-layout .social-wrapper .social-btn-wrapper button:nth-child(3):active {
+  background-color: #2f5297;
+}
+
+body #root .auth-grid-layout .social-wrapper .social-btn-wrapper button:nth-child(4) {
+  padding: 10px 6px;
+  background-color: #333;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+body #root .auth-grid-layout .social-wrapper .social-btn-wrapper button:nth-child(4):hover {
+  background-color: #414141;
+}
+
+body #root .auth-grid-layout .social-wrapper .social-btn-wrapper button:nth-child(4):focus {
+  outline: none;
+}
+
+body #root .auth-grid-layout .social-wrapper .social-btn-wrapper button:nth-child(4):active {
+  background-color: #242424;
+}
+
+body .nav-bar-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 18px 0px;
+  background-color: #192536;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 9;
+}
+
+body .nav-bar-wrapper nav {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .nav-bar-wrapper nav #logo h2 {
+  font-size: 38px;
+  font-family: Cookie;
+  color: white;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper a {
+  text-decoration: none;
+  color: white;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper .profile {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  margin-left: 12px;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper .profile a img {
+  width: 100%;
+  height: auto;
+  max-width: 40px;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper .navico {
+  margin-right: 0px;
+  -webkit-transition: background-color 0.1s ease-out 0s;
+  transition: background-color 0.1s ease-out 0s;
+  position: relative;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper .navico .new-post-opt-wrapper {
+  visibility: collapse;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s ease-out 0s;
+  transition: opacity 0.1s ease-out 0s;
+  top: 0;
+  left: 0;
+  padding: 12px;
+  border-radius: 4px;
+  background-color: #7041fe;
+  width: 100%;
+  -webkit-transform: translateY(60%);
+          transform: translateY(60%);
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper .navico .new-post-opt-wrapper .new-opt-list {
+  list-style-type: none;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper .navico .new-post-opt-wrapper .new-opt-list .new-post-opt {
+  margin-right: 0px;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  letter-spacing: 4px;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper .navico .new-post-opt-wrapper .new-opt-list .new-post-opt a {
+  padding: 0px;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper .navico .new-post-opt-wrapper .new-opt-list .new-post-opt a:hover {
+  background-color: transparent;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper .navico .new-post-opt-wrapper .new-opt-list .new-post-opt:hover {
+  background-color: #5b31d8;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper .navico a,
+body .nav-bar-wrapper nav #nav-list-wrapper .navico span {
+  cursor: pointer;
+  padding: 8px 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 3px;
+  border-radius: 26px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper .navico a i,
+body .nav-bar-wrapper nav #nav-list-wrapper .navico span i {
+  margin-right: 4px;
+  color: white;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper .navico a:hover,
+body .nav-bar-wrapper nav #nav-list-wrapper .navico span:hover {
+  background-color: #7041fe;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper li {
+  margin-right: 12px;
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper li input {
+  width: 100%;
+  margin-right: 12px;
+  padding: 6px 10px 6px 14px;
+  border: none;
+  border-radius: 24px;
+  background-color: #f0ecfd;
+  -webkit-transition: -webkit-box-shadow 0.1s ease-in 0s;
+  transition: -webkit-box-shadow 0.1s ease-in 0s;
+  transition: box-shadow 0.1s ease-in 0s;
+  transition: box-shadow 0.1s ease-in 0s, -webkit-box-shadow 0.1s ease-in 0s;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: #0c0c0c;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper li input:focus {
+  outline: none;
+  -webkit-box-shadow: 0px 0px 0px 3.2px #5b31d8, 0px 0px 1px 3px #744bf0;
+          box-shadow: 0px 0px 0px 3.2px #5b31d8, 0px 0px 1px 3px #744bf0;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper li input:hover {
+  -webkit-box-shadow: 0px 0px 0px 3.2px #5b31d8, 0px 0px 1px 3px #744bf0;
+          box-shadow: 0px 0px 0px 3.2px #5b31d8, 0px 0px 1px 3px #744bf0;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper li button {
+  padding: 8px 16px;
+  background-color: #7041fe;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper li button:hover {
+  background-color: #7f55fd;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper li button:focus {
+  outline: none;
+}
+
+body .nav-bar-wrapper nav #nav-list-wrapper li button:active {
+  background-color: #5b31d8;
+}
+
+body #section1 {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+body #section1 .section1-info-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 5em;
+}
+
+body #section1 .section1-info-text h1 {
+  font-size: 4em;
+  color: white;
+  font-family: Cookie;
+}
+
+body #section1 .section1-info-text h1 span {
+  font-size: 1em;
+  font-family: Cookie;
+}
+
+body .feed-page-parent {
+  position: fixed;
+  width: 70%;
+  height: 80vh;
+  max-height: 80vh;
+  margin-top: 5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 22% 50% 28%;
+      grid-template-columns: 22% 50% 28%;
+}
+
+body .feed-page-parent .main-title {
+  margin-bottom: 12px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 32px;
+}
+
+body .feed-page-parent .subs {
+  width: 95%;
+  background-color: #192536;
+  border-radius: 8px;
+  padding: 12px 0px;
+}
+
+body .feed-page-parent .subs .all-subs {
+  padding-top: 12px;
+}
+
+body .feed-page-parent .subs .all-subs a {
+  text-decoration: none;
+}
+
+body .feed-page-parent .subs .all-subs a .sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+body .feed-page-parent .subs .all-subs a .sub:hover {
+  background-color: #161e29;
+}
+
+body .feed-page-parent .subs .all-subs a .sub h2 {
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+body .feed-page-parent .subs .all-subs a .sub .profilePic {
+  margin-right: 12px;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .feed-page-parent .subs .all-subs a .sub .profilePic img {
+  width: 100%;
+  height: auto;
+  max-width: 40px;
+}
+
+body .feed-page-parent .feed-container {
+  width: 98%;
+  border-radius: 8px;
+  background-color: #192536;
+  padding: 12px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+body .feed-page-parent .feed-container .post-wrapper {
+  margin-bottom: 18px;
+}
+
+body .feed-page-parent .feed-container .post-wrapper:last-child {
+  margin-bottom: 12px;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .user-info-wrapper {
+  padding: 14px;
+  border-radius: 8px 8px 0px 0px;
+  background-color: #e4e4e4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: #333;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .user-info-wrapper .profilePic {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .user-info-wrapper .profilePic img {
+  width: 100%;
+  height: auto;
+  min-width: 40px;
+  max-width: 80px;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .user-info-wrapper a {
+  text-decoration: none;
+  color: #333;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .product-post {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .product-post .image {
+  width: 150px;
+  height: 200px;
+  overflow: hidden;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .product-post .image img {
+  border-radius: 4px;
+  width: 150px;
+  height: 200px;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .product-post .details {
+  width: 95%;
+  height: 100%;
+  justify-self: flex-end;
+  position: relative;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .product-post .details h2 {
+  font-size: 20px;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .product-post .details .price {
+  font-size: 16px;
+  margin: 6px 0px;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .product-post .details .desc {
+  text-overflow: clip;
+  font-size: 16px;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .product-post .details .buttons {
+  position: absolute;
+  bottom: 0;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .product-post .details .buttons button {
+  width: 270px;
+  padding: 8px 12px;
+  background-color: #7041fe;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .product-post .details .buttons button:hover {
+  background-color: #7f55fd;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .product-post .details .buttons button:focus {
+  outline: none;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .product-post .details .buttons button:active {
+  background-color: #5b31d8;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .post {
+  padding: 14px 12px;
+  background-color: #f6f6f6;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .post h2 {
+  margin-bottom: 8px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  color: #333;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .post p {
+  text-align: justify;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: #333;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .controls {
+  padding: 12px;
+  border-radius: 0px 0px 8px 8px;
+  background-color: #e4e4e4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .controls p {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: #333;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+body .feed-page-parent .feed-container .post-wrapper .controls p:hover {
+  color: #db4437;
+}
+
+body .feed-page-parent .trending {
+  border-radius: 8px;
+  background-color: #192536;
+  padding: 12px;
+}
+
+body .profile-wrapper {
+  width: 58%;
+  background-color: #192536;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+body .profile-wrapper .user-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  height: auto;
+  min-height: 30vh;
+}
+
+body .profile-wrapper .user-info .posts {
+  padding: 12px;
+  margin-top: 12px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #161e29;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper {
+  max-width: 49.4%;
+  margin-right: 12px;
+  margin-bottom: 18px !important;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper:last-child {
+  margin-bottom: 0px !important;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper:nth-child(even) {
+  margin-right: 0px;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .post {
+  border-radius: 8px 8px 0px 0px;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper {
+  margin-bottom: 18px;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper:last-child {
+  margin-bottom: 12px;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .user-info-wrapper {
+  padding: 14px;
+  border-radius: 8px 8px 0px 0px;
+  background-color: #e4e4e4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: #333;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .user-info-wrapper .profilePic {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .user-info-wrapper .profilePic img {
+  width: 100%;
+  height: auto;
+  min-width: 40px;
+  max-width: 80px;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .user-info-wrapper a {
+  text-decoration: none;
+  color: #333;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .product-post {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .product-post .image {
+  width: 150px;
+  height: 200px;
+  overflow: hidden;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .product-post .image img {
+  border-radius: 4px;
+  width: 150px;
+  height: 200px;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .product-post .details {
+  width: 95%;
+  height: 100%;
+  justify-self: flex-end;
+  position: relative;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .product-post .details h2 {
+  font-size: 20px;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .product-post .details .price {
+  font-size: 16px;
+  margin: 6px 0px;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .product-post .details .desc {
+  text-overflow: clip;
+  font-size: 16px;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .product-post .details .buttons {
+  position: absolute;
+  bottom: 0;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .product-post .details .buttons button {
+  width: 270px;
+  padding: 8px 12px;
+  background-color: #7041fe;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .product-post .details .buttons button:hover {
+  background-color: #7f55fd;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .product-post .details .buttons button:focus {
+  outline: none;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .product-post .details .buttons button:active {
+  background-color: #5b31d8;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .post {
+  padding: 14px 12px;
+  background-color: #f6f6f6;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .post h2 {
+  margin-bottom: 8px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  color: #333;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .post p {
+  text-align: justify;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: #333;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .controls {
+  padding: 12px;
+  border-radius: 0px 0px 8px 8px;
+  background-color: #e4e4e4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .controls p {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: #333;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+body .profile-wrapper .user-info .posts .post-wrapper .controls p:hover {
+  color: #db4437;
+}
+
+body .profile-wrapper .user-info .profile-wrapper {
+  background-color: #161e29;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+}
+
+body .profile-wrapper .user-info .profile-wrapper .profilePic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  -o-object-fit: fill;
+     object-fit: fill;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .profile-wrapper .user-info .profile-wrapper .profilePic img {
+  width: 100%;
+  height: auto;
+  max-width: 160px;
+}
+
+body .profile-wrapper .user-info .profile-wrapper .details {
+  background-color: #161e29;
+  height: auto;
+  margin-left: 20px;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+body .profile-wrapper .user-info .profile-wrapper .details .follow-state {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  background-color: #192536;
+  border-radius: 8px;
+  margin: 12px 0px;
+}
+
+body .profile-wrapper .user-info .profile-wrapper .details .follow-state div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding: 18px 0px;
+}
+
+body .profile-wrapper .user-info .profile-wrapper .details .title {
+  font-size: 12px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: #c8c8c8be;
+}
+
+body .profile-wrapper .user-info .profile-wrapper .details h2 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+body .profile-wrapper .user-info .profile-wrapper .details small {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+body .profile-wrapper .user-info .profile-wrapper .details p {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+body .profile-wrapper .user-info .profile-wrapper .details .control-button button {
+  padding: 8px 16px;
+  background-color: #7041fe;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+body .profile-wrapper .user-info .profile-wrapper .details .control-button button i {
+  margin-right: 8px;
+}
+
+body .profile-wrapper .user-info .profile-wrapper .details .control-button button:hover {
+  background-color: #7f55fd;
+}
+
+body .profile-wrapper .user-info .profile-wrapper .details .control-button button:focus {
+  outline: none;
+}
+
+body .profile-wrapper .user-info .profile-wrapper .details .control-button button:active {
+  background-color: #5b31d8;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,24 @@
+@font-face {
+  font-family: Quicksand;
+  src: url("../fonts/Futura/futura medium bt.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url("../fonts/Futura/Futura Heavy font.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Cookie;
+  src: url("../fonts/Cookie/Cookie-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=utils.css.map */

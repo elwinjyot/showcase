@@ -1,0 +1,214 @@
+// Fonts
+@font-face {
+  font-family: Quicksand;
+  src: url("../fonts/Futura/futura\ medium\ bt.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: Quicksand;
+  src: url("../fonts/Futura/Futura\ Heavy\ font.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Cookie;
+  src: url("../fonts/Cookie/Cookie-Regular.ttf");
+}
+// Fonts
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Colors
+$mirage: #161e29;
+$mirage-light: #192536;
+$neonBlue: #7041fe;
+$neonBlue-active: #5b31d8;
+$neonBlue-hover: #7f55fd;
+$beauty-grey: #333;
+// Colors
+
+// Mixins
+@mixin Quicksand($weight, $color) {
+  font-family: "Quicksand", sans-serif;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin Cookie {
+  font-family: Cookie;
+}
+
+@mixin button-primary($padding, $radius, $bgColor, $textColor, $hover, $active) {
+  padding: $padding;
+  background-color: $bgColor;
+  color: $textColor;
+  border-radius: $radius;
+  border: none;
+  cursor: pointer;
+  @include Quicksand(500, white);
+
+  &:hover {
+    background-color: $hover;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    background-color: $active;
+  }
+}
+
+@mixin button-outlined($padding, $radius, $borderWidth, $borderColor, $textColor, $hover, $active) {
+  padding: $padding;
+  background-color: transparent;
+  color: $textColor;
+  border-radius: $radius;
+  border: $borderWidth solid $borderColor;
+  cursor: pointer;
+  @include Quicksand(500, white);
+
+  &:hover {
+    background-color: $hover;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    background-color: $active;
+  }
+}
+@mixin input-primary($padding, $radius) {
+  padding: $padding;
+  // border: 2px solid $neonBlue;
+  border: none;
+  border-radius: $radius;
+  background-color: #f0ecfd;
+  transition: box-shadow 0.1s ease-in 0s;
+  @include Quicksand(500, rgb(12, 12, 12));
+
+  &:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 3.2px #5b31d8, 0px 0px 1px 3px #744bf0;
+  }
+  &:hover {
+    box-shadow: 0px 0px 0px 3.2px #5b31d8, 0px 0px 1px 3px #744bf0;
+  }
+}
+
+// Mixins
+
+@mixin postStyle() {
+  .post-wrapper {
+    margin-bottom: 18px;
+
+    &:last-child {
+      margin-bottom: 12px;
+    }
+    .user-info-wrapper {
+      padding: 14px;
+      border-radius: 8px 8px 0px 0px;
+      background-color: #e4e4e4;
+      display: flex;
+      align-items: center;
+      @include Quicksand(500, $beauty-grey);
+
+      .profilePic {
+        width: 30px;
+        height: 30px;
+        margin-right: 8px;
+        overflow: hidden;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 100%;
+          height: auto;
+          min-width: 40px;
+          max-width: 80px;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: $beauty-grey;
+      }
+    }
+    .product-post {
+      display: grid;
+      grid-template-columns: auto 1fr;
+
+      .image {
+        width: 150px;
+        height: 200px;
+        overflow: hidden;
+
+        img {
+          border-radius: 4px;
+          width: 150px;
+          height: 200px;
+        }
+      }
+      .details {
+        width: 95%;
+        height: 100%;
+        justify-self: flex-end;
+        position: relative;
+
+        h2 {
+          font-size: 20px;
+        }
+        .price {
+          font-size: 16px;
+          margin: 6px 0px;
+        }
+        .desc {
+          text-overflow: clip;
+          font-size: 16px;
+        }
+        .buttons {
+          position: absolute;
+          bottom: 0;
+
+          button {
+            width: 270px;
+
+            @include button-primary(8px 12px, 4px, $neonBlue, white, $neonBlue-hover, $neonBlue-active);
+          }
+        }
+      }
+    }
+    .post {
+      padding: 14px 12px;
+      background-color: #f6f6f6;
+
+      h2 {
+        margin-bottom: 8px;
+        @include Quicksand(700, $beauty-grey);
+      }
+      p {
+        text-align: justify;
+        @include Quicksand(500, $beauty-grey);
+      }
+    }
+    .controls {
+      padding: 12px;
+      border-radius: 0px 0px 8px 8px;
+      background-color: #e4e4e4;
+      display: flex;
+
+      p {
+        @include Quicksand(500, $beauty-grey);
+        margin-right: 8px;
+        cursor: pointer;
+
+        &:hover {
+          color: #db4437;
+        }
+      }
+    }
+  }
+}

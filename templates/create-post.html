@@ -1,0 +1,13 @@
+{% extends "index.html" %} {% block container %} {% if form == "blog" %}
+<h2>Blog</h2>
+<form id="blogForm">
+  <div class="inputGroup">
+    <input type="text" name="title" placeholder="Blog title" />
+  </div>
+  <div class="inputGroup">
+    <textarea name="body" cols="30" rows="10" placeholder="Body"></textarea>
+  </div>
+</form>
+{% else %}
+<h2>Create a Product</h2>
+{% endif %} {% endblock %}

@@ -1,0 +1,49 @@
+{% extends "index.html" %} {% load static %} {% block container %}
+<main class="profile-wrapper">
+  {% csrf_token %}
+  <section class="user-info">
+    <div class="profile-wrapper">
+      <div class="profilePic">
+        <img src="{{user.showcaser.profilePic.url}}" />
+      </div>
+      <div class="details">
+        <h2>
+          {{user.first_name}} {% if user.showcaser.verified %}
+          <i class="far fa-check" style="font-size: 18px"></i>
+          {% endif %}
+        </h2>
+        <span class="title">Username</span><br />
+        <p>{{user.username}}</p>
+        <span class="title">Bio</span>
+        <p>{{user.showcaser.bio}}</p>
+        <div class="follow-state">
+          <div class="followers">
+            <p>Followers</p>
+            <h2 id="follower-count">{{user.showcaser.followers.all | length}}</h2>
+          </div>
+          <div class="following">
+            <p>Following</p>
+            <h2 id="following-count">{{user.showcaser.following.all | length}}</h2>
+          </div>
+        </div>
+        <div class="control-button">
+          {% if user == request.user %}
+          <button>Edit</button>
+          {% else %} {% if request.user in followers %}
+          <button data-following-userId="{{request.user.id}}" data-profileId="{{user.id}}" id="unfollow-btn"><i class="far fa-minus"></i>Unfollow</button>
+          {% else %}
+          <button data-following-userId="{{request.user.id}}" data-profileId="{{user.id}}" id="follow-btn"><i class="far fa-plus"></i>Follow</button>
+          {% endif %} {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="posts">
+      {% for post in posts %} {% if post.category == "Blog" %}
+      <div class="post-wrapper">{% include "components/blogPostBody.html" %}{% include "components/controls.html" %}</div>
+      {% elif post.category == "Product" %}
+      <div class="post-wrapper">{% include "components/productPostBody.html" %}{% include "components/controls.html" %}</div>
+      {% endif %} {% endfor %}
+    </div>
+  </section>
+</main>
+{% endblock %}

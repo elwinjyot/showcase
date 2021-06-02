@@ -1,0 +1,14 @@
+<div class="user-info-wrapper">
+  <div class="profilePic">
+    <img
+      src="{{post.owner.showcaser.profilePic.url}}"
+      alt="no img"
+      class="pic"
+    />
+  </div>
+  <a href="{% url 'profile' post.owner.id %}"
+    >{{post.owner.first_name}} {% if post.owner.showcaser.verified %}
+    <i class="far fa-check" style="color: #333; margin-left: 4px"></i>
+    {% endif %}
+  </a>
+</div>

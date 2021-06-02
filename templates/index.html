@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{% static 'styles/modules/fontAwesome.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}" />
+    <title>Showcase</title>
+  </head>
+  <body>
+    <header class="nav-bar-wrapper">
+      <nav>
+        <div id="logo">
+          <h2>Showcase</h2>
+        </div>
+        {% if user.is_authenticated %}
+        <ul id="nav-list-wrapper">
+          <li class="nav-item">
+            <input
+              type="search"
+              placeholder="Search"
+              name="search-showcase"
+              id="home-search-bar"
+            />
+          </li>
+          <li class="nav-item navico">
+            <a href="{% url 'feed' %}"><i class="far fa-home"></i> HOME</a>
+          </li>
+          <li class="nav-item navico create-post">
+            <span><i class="far fa-plus"></i>CREATE POST</span>
+            <div class="new-post-opt-wrapper">
+              <ul class="new-opt-list">
+                <li class="new-post-opt">
+                  <a href="{% url 'createPost' 'blog' %}">BLOG</a>
+                </li>
+                <li class="new-post-opt">
+                  <a href="{% url 'createPost' 'product' %}">PRODUCT</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item navico">
+            <a href="{% url 'logout' %}" style="text-decoration: none"
+              ><i class="far fa-sign-out"></i>LOGOUT</a
+            >
+          </li>
+          <li class="nav-item profile">
+            <a href="{% url 'profile' request.user.id %}">
+              <img src="{{request.user.showcaser.profilePic.url}}" alt="" />
+            </a>
+          </li>
+        </ul>
+        {% else %}
+        <ul id="nav-list-wrapper">
+          <li class="nav-item">
+            <a href="{% url 'signup' %}">
+              <button
+                id="signup-btn"
+                class="auth-btn"
+                data-formName="signupForm"
+              >
+                Sign Up
+              </button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{% url 'login' %}">
+              <button id="login-btn" class="auth-btn" data-formName="loginForm">
+                Login
+              </button>
+            </a>
+          </li>
+        </ul>
+        {% endif %}
+      </nav>
+    </header>
+    <main id="root">{% block container %} {% endblock %}</main>
+    <script src="{% static 'modules/JQuery.js' %}"></script>
+    <script src="{% static 'modules/GSAP.js' %}"></script>
+    <script src="{% static 'modules/fontAwesome.js' %}"></script>
+    <script type="module" src="{% static 'scripts/utils.js' %}"></script>
+    <script type="module" src="{% static 'scripts/animations.js' %}"></script>
+    <script type="module" src="{% static 'scripts/app.js' %}"></script>
+    {% block additionalScripts %} {% endblock %}
+  </body>
+</html>
